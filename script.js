@@ -91,4 +91,16 @@
     }, { passive: true });
   }
 
+  /* Клики по телефону и WhatsApp -> конверсии Google Ads.
+     Без preventDefault: tel: не выгружает страницу, wa.me открывается в новой вкладке. */
+  window.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href*="wa.me"]');
+    if (!a || typeof gtag !== 'function') return;
+    if (a.getAttribute('href').indexOf('tel:') === 0) {
+      gtag('event', 'conversion', { 'send_to': 'AW-18559481387/oaiOCPqis7MdEKvs7JFF', 'value': 1.0, 'currency': 'USD' });
+    } else if (typeof gtag_report_contact === 'function') {
+      gtag_report_contact();
+    }
+  }, true);
+
 })();

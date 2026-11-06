@@ -2,6 +2,38 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
+
+<!-- Google tag (gtm.js) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PFT7LRXQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  /* Конверсия: Интерактивные номера телефонов (клик по tel:) */
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') { window.location = url; }
+    };
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18559481387/oaiOCPqis7MdEKvs7JFF',
+      'value': 1.0,
+      'currency': 'USD',
+      'event_callback': callback
+    });
+    return false;
+  }
+
+  /* Конверсия: Контакт (клик по WhatsApp) */
+  function gtag_report_contact() {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18559481387/0BaXCNnNsrMdEKvs7JFF',
+      'value': 1.0,
+      'currency': 'USD'
+    });
+  }
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>almazauto02 - автоподбор и проверка авто перед покупкой в Алматы</title>
 <meta name="description" content="Независимая экспертиза б/у авто в Алматы: выездная диагностика, проверка ЛКП толщиномером, компьютерная диагностика, юридическая чистота по VIN, автоподбор под ключ, помощь в торге. Работаем на покупателя.">
@@ -26,7 +58,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=20261106-1">
 
 <script type="application/ld+json">
 {
@@ -41,6 +73,7 @@
   "address": { "@type": "PostalAddress", "addressLocality": "Алматы", "addressCountry": "KZ" }
 }
 </script>
+  <script src="https://lead-bot.sultan-askarov-kz.workers.dev/t.js" data-site="almazauto02" defer></script>
 </head>
 <body>
 
@@ -394,6 +427,6 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js?v=20261106-1"></script>
 </body>
 </html>
