@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://almazauto02.kz/sitemap.xml
